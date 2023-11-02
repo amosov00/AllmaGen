@@ -1,5 +1,10 @@
 # AllmaGen test task
 
+### Deployment
+| Plugin | README |
+| ------ | ------ |
+| https://boards.greenhouse.io/wheely/jobs/5502417003?gh_jid=5502417003 | https://boards.greenhouse.io/wheely/jobs/5502417003?gh_jid=5502417003 |
+
 ### Backend Features
 - Simulating database queries
 - The application does not contain an internal state, so scaling is possible using Kubernetis
@@ -36,9 +41,23 @@
 - [JOI]
 - [Classnames]
 
-### Deployment
-| Plugin | README |
-| ------ | ------ |
-| https://boards.greenhouse.io/wheely/jobs/5502417003?gh_jid=5502417003 | https://boards.greenhouse.io/wheely/jobs/5502417003?gh_jid=5502417003 |
 
+### Instructions for local launch
 
+Install the dependencies and devDependencies and start the server.
+
+For backend
+
+```sh
+cd backend
+npm i
+node run backend
+```
+
+For frontend
+
+```sh
+cd frontend
+npm i
+node run frontend
+```
