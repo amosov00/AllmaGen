@@ -44,18 +44,15 @@
 
 ### Instructions for local launch
 
-Install the dependencies and devDependencies and start the server.
-
-For backend
-
+1. Download [this files](https://drive.google.com/file/d/1gydaF1Ab9lIeFVxQEHi-3RGF-eRAgdLX/view)
+2. Copy these two files to a folder ``/backend/tables``
+3. Install dependencies and run backend
 ```sh
 cd backend
 npm i
 node run backend
 ```
-
-For frontend
-
+4. Install dependencies and run frontend
 ```sh
 cd frontend
 npm i
