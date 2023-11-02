@@ -2,16 +2,18 @@ import Paper from '@mui/material/Paper';
 import Chart from 'react-apexcharts'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import {toTableFormat} from './utils.js'
+import {toTableFormat} from '../utils.js'
 import CircularProgress from '@mui/material/CircularProgress';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import classNames from 'classnames'
+import { useAlert } from "react-alert";
 
 export function CTR() {
     const [tableData, setTableData] = useState(toTableFormat([0, 0]))
     const [loading, setLoading] = useState(true)
     const [minutes, setMinutes] = useState(60)
+    const alert = useAlert();
 
     function clearData() {
         setTableData(toTableFormat([0, 0]))
@@ -27,7 +29,7 @@ export function CTR() {
             const formatedData = toTableFormat(data, 'CTR')
             setTableData(formatedData)
         } catch (e) {
-            throw new Error(e)
+            alert.error(e.message)
         } finally {
             setLoading(false)
         }

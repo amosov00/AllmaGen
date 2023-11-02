@@ -1,15 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import { CTR } from './CTR';
-import { EvPM } from './EvPM';
-import { Table } from './Table';
+import App from './routes/App';
+import { CTR } from './routes/CTR';
+import { EvPM } from './routes/EvPM';
+import { Table } from './routes/Table';
 import {
   createBrowserRouter,
   RouterProvider,
   Navigate
 } from "react-router-dom";
+import { positions, Provider } from "react-alert";
+import AlertTemplate from "react-alert-template-basic";
+
+const options = {
+  timeout: 5000,
+  position: positions.BOTTOM_CENTER
+};
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -39,5 +47,7 @@ const router = createBrowserRouter([
 ]);
 
 root.render(
-  <RouterProvider router={router} />
+  <Provider template={AlertTemplate} {...options}>
+    <RouterProvider router={router} />
+  </Provider>
 );

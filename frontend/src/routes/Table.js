@@ -5,10 +5,11 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { DataGrid, GridToolbarContainer, GridToolbarFilterButton } from '@mui/x-data-grid';
-import {createColumns} from './utils.js'
+import {createColumns} from '../utils.js'
 import classNames from 'classnames'
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
+import { useAlert } from "react-alert";
 
 function getCustomToolbar(data, fn, event, setEvent) {
     return CustomToolbar.bind(this, data.length, fn, event, setEvent)
@@ -46,6 +47,7 @@ export function Table() {
     const [columns, setColumns] = useState([])
     const [result, setResult] = useState({})
     const [event, setEvent] = useState('content')
+    const alert = useAlert();
 
     function countUnique(iterable) {
         return new Set(iterable).size;
@@ -68,14 +70,13 @@ export function Table() {
         try {
             setLoading(true)
             const {data} = await axios.get(`http://localhost:3000/table`)
-            console.log(data)
             setTableData(data.map((item) => ({
                 ...item,
                 time: new Date(item.time.replace('000Z', '000'))
             })))
             setColumns(createColumns(data))
         } catch (e) {
-            throw new Error(e)
+            alert.error(e.message)
         } finally {
             setLoading(false)
         }

@@ -12,7 +12,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import { mainListItems } from './listItems'; 
+import { mainListItems } from '../components/listItems'; 
 import { Outlet, useLocation} from "react-router-dom";
 
 const drawerWidth = 240;
