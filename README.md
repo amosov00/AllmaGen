@@ -86,8 +86,8 @@ node run frontend
 
 > | name   |  type      | data type      | description                                                  |
 > |--------|------------|----------------|--------------------------------------------------------------|
-> | `minutes` |  required  | string, number         | The specific proxy config unique idendifier                  |
-> | `event` |  required  | 'content', 'registration', 'fclick', 'lead', 'signup', 'misc'        | The specific proxy config unique idendifier                  |
+> | `minutes` |  required  | string, number         | time step within which the index will be calculated                  |
+> | `event` |  required  | 'content', 'registration', 'fclick', 'lead', 'signup', 'misc'        | Сustom event for which the index will be calculatedidendifier                  |
 
 ##### Responses
 
