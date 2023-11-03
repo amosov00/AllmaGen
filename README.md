@@ -86,9 +86,8 @@ node run frontend
 
 > | name   |  type      | data type      | description                                                  |
 > |--------|------------|----------------|--------------------------------------------------------------|
-> | `uuid` |  required  | string         | The specific proxy config unique idendifier                  |
-> |--------|------------|----------------|--------------------------------------------------------------|
-> | `uuid` |  required  | string         | The specific proxy config unique idendifier                  |
+> | `minutes` |  required  | string, number         | The specific proxy config unique idendifier                  |
+> | `event` |  required  | 'content', 'registration', 'fclick', 'lead', 'signup', 'misc'        | The specific proxy config unique idendifier                  |
 
 ##### Responses
 
