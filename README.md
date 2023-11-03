@@ -62,7 +62,7 @@ node run frontend
 ### Backend API documentation
 
 <details>
-  <summary><code>GET</code> <code><b>/proxy-config/default</b></code> <code>(gets <b>default</b> proxy-config)</code></summary>
+  <summary><code>GET</code> <code><b>/table</b></code> <code>(Shows all actions of unique users)</code></summary>
 
 ##### Parameters
 
@@ -72,24 +72,21 @@ node run frontend
 
 > | http code     | content-type                      | response                                                            |
 > |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `200`         | `text/plain;charset=UTF-8`        | YAML string                                                         |
-> | `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
+> | `200`         | `text/plain;charset=UTF-8`        | JSON                                                         |
+> | `404`         | `application/json`                | `{"code":"404","message":"Error message"}`                            |
 
-##### Example cURL
-
-> ```javascript
->  curl -X GET -H "Content-Type: application/json" http://localhost:8889/proxy-config/default
-> ```
 
 </details>
 
 
 <details>
-  <summary><code>GET</code> <code><b>/proxy-config/{uuid}</b></code> <code>(gets proxy config by its uuid property)</code></summary>
+  <summary><code>GET</code> <code><b>/chart</b></code> <code>(takes a specific user action and time period and returns an array of objects. Each object contains an index value for a certain period)</code></summary>
 
 ##### Parameters
 
 > | name   |  type      | data type      | description                                                  |
+> |--------|------------|----------------|--------------------------------------------------------------|
+> | `uuid` |  required  | string         | The specific proxy config unique idendifier                  |
 > |--------|------------|----------------|--------------------------------------------------------------|
 > | `uuid` |  required  | string         | The specific proxy config unique idendifier                  |
 
@@ -97,13 +94,8 @@ node run frontend
 
 > | http code     | content-type                      | response                                                            |
 > |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `200`         | `text/plain;charset=UTF-8`        | YAML string                                                         |
-> | `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
+> | `200`         | `text/plain;charset=UTF-8`        | JSON                                                        |
+> | `404`         | `application/json`                | `{"code":"404","message":"Error message"}`                            |
 
-##### Example cURL
-
-> ```javascript
->  curl -X GET -H "Content-Type: application/json" http://localhost:8889/proxy-config/some-unique-uuid-string
-> ```
 
 </details>
