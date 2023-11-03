@@ -64,7 +64,7 @@ node run frontend
 <details>
   <summary><code>GET</code> <code><b>/table</b></code> <code>(Shows all actions of unique users)</code></summary>
 
-##### Parameters
+##### Query parameters
 
 > None
 
