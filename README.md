@@ -72,7 +72,7 @@ node run frontend
 
 > | http code     | content-type                      | response                                                            |
 > |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `200`         | `text/plain;charset=UTF-8`        | JSON                                                         |
+> | `200`         | `application/json`      | JSON                                                         |
 > | `404`         | `application/json`                | `{"code":"404","message":"Error message"}`                            |
 
 
@@ -93,7 +93,7 @@ node run frontend
 
 > | http code     | content-type                      | response                                                            |
 > |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `200`         | `text/plain;charset=UTF-8`        | JSON                                                        |
+> | `200`         | `application/json`         | JSON                                                        |
 > | `404`         | `application/json`                | `{"code":"404","message":"Error message"}`                            |
 
 
