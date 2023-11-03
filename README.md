@@ -82,7 +82,7 @@ node run frontend
 <details>
   <summary><code>GET</code> <code><b>/chart</b></code> <code>(takes a specific user action and time period and returns an array of objects. Each object contains an index value for a certain period)</code></summary>
 
-##### Parameters
+##### Query parameters
 
 > | name   |  type      | data type      | description                                                  |
 > |--------|------------|----------------|--------------------------------------------------------------|
