@@ -1,9 +1,9 @@
 # AllmaGen test task
 
 ### Deployment
-| Plugin | README |
+| Frontend | Backend |
 | ------ | ------ |
-| https://boards.greenhouse.io/wheely/jobs/5502417003?gh_jid=5502417003 | https://boards.greenhouse.io/wheely/jobs/5502417003?gh_jid=5502417003 |
+| http://n92650l3.beget.tech | https://fair-lime-bluefish-shoe.cyclic.app |
 
 ### Backend Features
 - Simulating database queries
