@@ -37,6 +37,7 @@
 - [Axios]
 - [Moment]
 - [Node.js]
+- [Apexcharts]
 - [Express]
 - [JOI]
 - [Classnames]
