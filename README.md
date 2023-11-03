@@ -59,6 +59,7 @@ npm i
 node run frontend
 ```
 
+### Backend API documentation
 
 <details>
   <summary><code>GET</code> <code><b>/proxy-config/default</b></code> <code>(gets <b>default</b> proxy-config)</code></summary>
